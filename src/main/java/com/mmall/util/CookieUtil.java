@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 @Slf4j
 public class CookieUtil {
-
+    //tomcat8 之后 不可以  以. 开头 设置域名
     private final static String COOKIE_DOMAIN = "happymmall.com";
     private final static String COOKIE_NAME = "mmall_login_token";
 
