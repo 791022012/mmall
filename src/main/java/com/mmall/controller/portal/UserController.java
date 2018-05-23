@@ -48,8 +48,8 @@ public class UserController {
 //            session.setAttribute(Const.CURRENT_USER,response.getData());
 
             CookieUtil.writeLoginToken(httpServletResponse,session.getId());
-            CookieUtil.readLoginToken(httpServletRequest);
-            CookieUtil.delLoginToken(httpServletRequest, httpServletResponse);
+//            CookieUtil.readLoginToken(httpServletRequest);
+//            CookieUtil.delLoginToken(httpServletRequest, httpServletResponse);
 
             RedisPoolUtil.setEx(session.getId(), JsonUtil.obj2String(response.getData()),Const.RedisCacheExtime.REDIS_SESSION_EXTIME );
             //暂时关闭 将cookie信息写入磁盘  将session信息写入到 Redis中并设置过期时间30分钟
